@@ -65,3 +65,5 @@ gem 'haml-rails'
 gem 'html2haml'
 
 gem 'devise'
+
+gem "dartsass-rails", "~> 0.5.1"
