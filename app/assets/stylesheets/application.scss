@@ -1,1 +1,38 @@
-// Sassy
+@use "variables" as v;
+@use "header";
+@use "button";
+@use "form";
+
+html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Avenir", "Arial", sans-serif;
+  position: relative;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 30px 26px;
+  width: 100%;
+}
+
