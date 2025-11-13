@@ -66,6 +66,6 @@ gem 'html2haml'
 
 gem 'devise'
 
-gem "dartsass-rails", "~> 0.5.1"
+gem 'dartsass-rails', '~> 0.5.1'
 
-gem "importmap-rails", "~> 2.2"
+gem 'importmap-rails', '~> 2.2'
