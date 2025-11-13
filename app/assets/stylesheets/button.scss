@@ -1,0 +1,13 @@
+@use "variables" as v;
+
+.btn-primary {
+  background-color: v.$primary-color;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px 0;
+}
