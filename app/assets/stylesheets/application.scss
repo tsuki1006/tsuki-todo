@@ -1,7 +1,10 @@
 @use "variables" as v;
+@use "common";
 @use "header";
 @use "button";
 @use "form";
+@use "card";
+
 
 html {
   word-spacing: 1px;
@@ -34,5 +37,22 @@ body {
   box-sizing: border-box;
   padding: 30px 26px;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  &.boards {
+    margin: 35px 0;
+  }
 }
 

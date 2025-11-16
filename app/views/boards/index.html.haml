@@ -1,0 +1,18 @@
+.container
+  %h2 All Boards
+  %section.boards
+    %ul.boards_list
+      - @boards.each do |board|
+        %li.card
+          .card_content
+            .card_detail
+              %p.card_detail_title
+                = board.title
+              %p.card_detail_content
+                = board.content
+              .card_icon
+                = image_tag 'icon1'
+            .card_edit
+              = image_tag 'combined_shape'
+      %li.card_new
+        = link_to '+ Add new board', new_board_path

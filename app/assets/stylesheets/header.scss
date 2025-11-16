@@ -1,7 +1,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 17px 30px;
+  align-items: center;
+  padding: 10px 30px;
   border-bottom: 1px solid;
 
   &_pageTitle {

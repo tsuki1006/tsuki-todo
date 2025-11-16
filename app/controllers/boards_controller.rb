@@ -1,6 +1,10 @@
 class BoardsController < ApplicationController
   before_action :authenticate_user!, only: [ :new, :create ]
 
+  def index
+    @boards = Board.all
+  end
+
   def new
     @board = current_user.boards.build
   end
