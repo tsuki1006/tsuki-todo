@@ -13,6 +13,9 @@
               .card_icon
                 = image_tag 'icon1'
             .card_edit
-              = image_tag 'combined_shape'
+              .dropdown
+                = image_tag 'combined_shape'
+                .dropdown-content
+                  = link_to 'Edit', edit_board_path(board)
       %li.card_new
         = link_to '+ Add new board', new_board_path

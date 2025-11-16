@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :authenticate_user!, only: [ :new, :create ]
+  before_action :authenticate_user!, only: [ :new, :create, :edit ]
 
   def index
     @boards = Board.all
@@ -16,6 +16,10 @@ class BoardsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+    @board = Board.find(params[:id])
   end
 
   private
