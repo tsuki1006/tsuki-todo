@@ -15,13 +15,25 @@
   background-color: #ffffff;
   border: 1px solid #f4f4f4;
   border-radius: 10px;
-  min-width: 120px;
+  width: 100px;
   padding: 10px;
   text-align: center;
 }
 
+.mini {
+  width: 66px;
+  height: 66px;
+  text-align-last: left;
+  padding: 12px 15px;
+}
+
 .dropdown-content a {
+  display: block;
   font-size: 12px;
+}
+
+.dropdown-content a + a {
+  margin-top: 13px;
 }
 
 .dropdown-content a:hover {

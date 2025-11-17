@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  before_action :authenticate_user!, only: [ :new, :create, :edit, :update ]
+  before_action :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy ]
 
   def index
     @boards = Board.all
@@ -30,6 +30,12 @@ class BoardsController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    board = Board.find(params[:id])
+    board.destroy!
+    redirect_to boards_path
   end
 
   private
