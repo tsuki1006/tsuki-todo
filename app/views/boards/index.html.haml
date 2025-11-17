@@ -1,0 +1,23 @@
+.container
+  %h2 All Boards
+  %section.boards
+    %ul.boards_list
+      - @boards.each do |board|
+        %li.card
+          .card_content
+            .card_detail
+              %p.card_detail_title
+                = board.title
+              %p.card_detail_content
+                = board.content
+              .card_icon
+                = image_tag 'icon1'
+            - if user_signed_in? && current_user.has_written?(board)
+              .card_edit
+                .dropdown
+                  = image_tag 'combined_shape'
+                  .dropdown-content.mini
+                    = link_to 'Edit', edit_board_path(board)
+                    = link_to 'Delete', board_path(board), data: { turbo_method: :delete, turbo_confirm: '本当に削除してもよろしいですか？' }
+      %li.card_new
+        = link_to '+ Add new board', new_board_path

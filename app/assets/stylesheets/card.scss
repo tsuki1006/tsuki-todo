@@ -1,0 +1,53 @@
+@mixin card($background-color) {
+  min-height: 160px;
+  border-radius: 10px;
+  background-color: $background-color;
+}
+
+.card {
+  @include card(#F4F4F4);
+  padding: 30px 20px 20px;
+
+  &_new {
+    @include card(unset);
+    border: 1px dashed #00000033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_detail {
+    &_title {
+      font-size: 18px;
+    }
+    &_content {
+      font-size: 14px;
+      opacity: 0.4;
+      margin-top: 6px;
+    }
+  }
+
+  &_icon {
+    margin-top: 30px;
+      img {
+          width: 30px;
+          height: 30px;
+      }
+  }
+
+  &_edit {
+    img {
+        width: 24px;
+        height: 100%;
+    }
+  }
+}
+
+li + li {
+    margin-top: 26px;
+}
