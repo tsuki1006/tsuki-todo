@@ -1,3 +1,4 @@
+// dropdown
 .dropdown {
   position: relative;
   display: inline-block;
@@ -42,4 +43,15 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+
+// error_message
+.error_messages {
+  margin-top: 20px;
+}
+
+.error_message {
+  opacity: 0.4;
+  margin: 0;
 }
