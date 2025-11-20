@@ -1,0 +1,20 @@
+%li.card
+  .card_content
+    .card_detail
+      %p.card_detail_title
+        = task.title
+      %p.card_detail_content
+        = task.content
+      .card_icon
+        = image_tag 'icon1'
+    .card_item
+      - if user_signed_in? && current_user.has_written?(task)
+        .card_edit
+          .dropdown
+            = image_tag 'combined_shape'
+            .dropdown-content.mini
+              %a 'Edit'
+              %a 'Delete'
+      .card_message
+        %span 23
+        = image_tag 'message'

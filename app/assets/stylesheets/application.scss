@@ -52,7 +52,7 @@ ul {
 }
 
 section {
-  &.boards {
+  &.boards, &.tasks {
     margin: 35px 0;
   }
 }

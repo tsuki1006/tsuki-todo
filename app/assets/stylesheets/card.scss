@@ -34,16 +34,40 @@
 
   &_icon {
     margin-top: 30px;
+    height: 30px;
       img {
           width: 30px;
           height: 30px;
       }
   }
 
+  &_item {
+    position: relative;
+  }
+
   &_edit {
     img {
         width: 24px;
         height: 100%;
+    }
+  }
+
+  &_message {
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    span{
+      opacity: 0.2;
+      font-size: 14px;
+    }
+    img {
+      width: 20px;
+      height: 100%;
     }
   }
 }
