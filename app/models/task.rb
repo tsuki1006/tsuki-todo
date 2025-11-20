@@ -21,6 +21,8 @@ class Task < ApplicationRecord
   validates :content, presence: true
   validates :deadline, presence: true
 
+  has_one_attached :image
+
   belongs_to :user
   belongs_to :board
 
