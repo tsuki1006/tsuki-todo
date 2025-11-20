@@ -1,4 +1,7 @@
 %li.card
+  - if task.image.attached?
+    .card_image
+      = image_tag task.image
   .card_content
     .card_detail
       %p.card_detail_title

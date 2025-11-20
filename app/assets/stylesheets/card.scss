@@ -16,6 +16,20 @@
     align-items: center;
   }
 
+  &_image {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    height: 170px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: inherit;
+      object-fit:cover;
+    }
+  }
+
   &_content {
     display: flex;
     justify-content: space-between;

@@ -14,5 +14,9 @@
     = f.label :deadline, 'Deadline'
   %div
     = f.date_field :deadline, class: "text"
-  .actions
+  %div.field_image
+    = f.label :image, 'Image *optional'
+  %div
+    = f.file_field :image, class: "image"
+  .actions.no_fixed
     = f.submit "Submit", class: "btn-primary"

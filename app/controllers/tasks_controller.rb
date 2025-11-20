@@ -26,7 +26,8 @@ class TasksController < ApplicationController
     params.require(:task).permit(
       :title,
       :content,
-      :deadline
+      :deadline,
+      :image
     )
   end
 

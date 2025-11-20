@@ -12,6 +12,10 @@ input {
   border-radius: 10px;
   background-color: #f4f4f4;
   }
+
+  &.image {
+    margin-top: 7px;
+  }
 }
 
 textarea {
@@ -36,6 +40,10 @@ label {
   &_description {
   margin-top: 33px;
   }
+
+  &_image {
+    margin-top: 20px;
+  }
 }
 
 .actions {
@@ -44,4 +52,11 @@ label {
   position: fixed;
   bottom: 0;
   left: 0;
+
+  &.no_fixed {
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+    position: static;
+  }
 }
