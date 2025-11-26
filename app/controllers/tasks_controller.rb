@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
-  before_action :authenticate_user!, only: [ :new, :create ]
-  before_action :set_board, only: [ :show, :new, :create ]
+  before_action :authenticate_user!, only: [ :new, :create, :edit ]
+  before_action :set_board, only: [ :show, :new, :create, :edit ]
 
   def show
     @task = @board.tasks.find(params[:id])
@@ -19,6 +19,10 @@ class TasksController < ApplicationController
       flash.now[:error] = '保存に失敗しました'
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+    @task = @board.tasks.find(params[:id])
   end
 
   def set_board

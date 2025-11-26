@@ -6,7 +6,7 @@
         .dropdown
           = image_tag 'combined_shape', class: 'edit'
           .dropdown-content.mini
-            %a Edit
+            = link_to 'Edit', edit_board_task_path(board_id: @board, id: @task)
             %a Delete
 
   %section.task
