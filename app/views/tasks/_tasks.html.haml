@@ -1,23 +1,18 @@
 %li.card
-  - if task.image.attached?
-    .card_image
-      = image_tag task.image
-  .card_content
-    .card_detail
-      %p.card_detail_title
-        = task.title
-      %p.card_detail_content
-        = task.content
-      .card_icon
-        = image_tag 'icon1'
-    .card_item
-      - if user_signed_in? && current_user.has_written?(task)
-        .card_edit
-          .dropdown
-            = image_tag 'combined_shape'
-            .dropdown-content.mini
-              %a 'Edit'
-              %a 'Delete'
-      .card_message
-        %span 23
-        = image_tag 'message'
+  = link_to board_task_path(board_id: task.board_id, id: task), class: "card_link" do
+    - if task.image.attached?
+      .card_img
+        = image_tag task.image
+    .card_content
+      .card_detail
+        %p.card_detail_title
+          = task.title
+        %p.card_detail_content
+          = task.content
+      .card_item
+        .card_icon
+          = image_tag 'icon1'
+        .card_message
+          %span 23
+          = image_tag 'message'
+

@@ -1,16 +1,18 @@
 %li.card
-  .card_content
-    .card_detail
-      %p.card_detail_title
-        = board.title
-      %p.card_detail_content
-        = board.content
+  = link_to board_path(board), class: "card_link" do
+    .card_content
+      .card_detail
+        %p.card_detail_title
+          = board.title
+        %p.card_detail_content
+          = board.content
       .card_icon
         = image_tag 'icon1'
-    - if user_signed_in? && current_user.has_written?(board)
-      .card_edit
-        .dropdown
-          = image_tag 'combined_shape'
-          .dropdown-content.mini
-            = link_to 'Edit', edit_board_path(board)
-            = link_to 'Delete', board_path(board), data: { turbo_method: :delete, turbo_confirm: '本当に削除してもよろしいですか？' }
+
+  - if user_signed_in? && current_user.has_written?(board)
+    .card_edit
+      .dropdown
+        = image_tag 'combined_shape'
+        .dropdown-content.mini
+          = link_to 'Edit', edit_board_path(board)
+          = link_to 'Delete', board_path(board), data: { turbo_method: :delete, turbo_confirm: '本当に削除してもよろしいですか？' }

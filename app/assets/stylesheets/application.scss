@@ -40,6 +40,11 @@ body {
   width: 100%;
 }
 
+h2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 a {
   text-decoration: none;
   color: #000;
