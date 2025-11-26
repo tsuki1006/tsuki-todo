@@ -1,0 +1,17 @@
+.container
+  %h2.task_top
+    .task_top_title= @task.title
+    - if user_signed_in? && current_user.has_written_task?(@task)
+      .task_top_edit
+        .dropdown
+          = image_tag 'combined_shape', class: 'edit'
+          .dropdown-content.mini
+            %a Edit
+            %a Delete
+
+  %section.task
+    - if @task.image.attached?
+      .task_img
+        = image_tag @task.image
+    .task_content
+      %p= @task.content

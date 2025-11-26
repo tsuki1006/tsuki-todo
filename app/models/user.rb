@@ -25,7 +25,11 @@ class User < ApplicationRecord
   has_many :boards, dependent: :destroy
   has_many :tasks, dependent: :destroy
 
-  def has_written?(board)
+  def has_written_board?(board)
     boards.exists?(id: board.id)
+  end
+
+  def has_written_task?(task)
+    tasks.exists?(id: task.id)
   end
 end

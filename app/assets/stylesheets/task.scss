@@ -1,0 +1,45 @@
+.task_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+
+  &_title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &_edit {
+    font-weight: normal;
+    word-wrap: none;
+    overflow-wrap: normal;
+
+    .dropdown {
+      display: flex;
+      align-items: center;
+    }
+    .dropdown-content {
+      top: 20px;
+    }
+  }
+}
+
+.task_img {
+  height: 170px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: inherit;
+    object-fit:cover;
+  }
+}
+
+.task_content {
+  margin-top: 35px;
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  padding: 20px 15px;
+}

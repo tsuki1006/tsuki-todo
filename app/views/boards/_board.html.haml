@@ -9,7 +9,7 @@
       .card_icon
         = image_tag 'icon1'
 
-  - if user_signed_in? && current_user.has_written?(board)
+  - if user_signed_in? && current_user.has_written_board?(board)
     .card_edit
       .dropdown
         = image_tag 'combined_shape'

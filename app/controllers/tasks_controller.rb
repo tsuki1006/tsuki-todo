@@ -1,6 +1,10 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!, only: [ :new, :create ]
-  before_action :set_board, only: [ :new, :create ]
+  before_action :set_board, only: [ :show, :new, :create ]
+
+  def show
+    @task = @board.tasks.find(params[:id])
+  end
 
   def new
     @task = @board.tasks.build(user: current_user)
