@@ -16,7 +16,8 @@
     = javascript_importmap_tags
   %body
     %header.header
-      %p.header_pageTitle Boards
+      .header_pageTitle
+        = link_to 'Boards', root_path
       - if user_signed_in?
         .dropdown
           = image_tag 'icon1'
