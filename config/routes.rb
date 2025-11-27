@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   root 'boards#index'
 
   resources :boards do
-    resources :tasks
+    resources :tasks do
+      resources :comments, only: [ :new, :create ]
+    end
   end
 end
