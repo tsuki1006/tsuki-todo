@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!, only: [ :new, :create, :edit, :update, :destroy ]
   before_action :set_board, only: [ :show, :new, :create, :edit, :update, :destroy ]
+  before_action :set_task, only: [ :show, :edit, :update ]
 
   def show
-    @task = @board.tasks.find(params[:id])
   end
 
   def new
@@ -22,11 +22,9 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = @board.tasks.find(params[:id])
   end
 
   def update
-    @task = @board.tasks.find(params[:id])
     if @task.update(task_params)
       redirect_to board_task_path(board_id: @board, id: @task), notice: '更新しました'
     else
@@ -43,6 +41,10 @@ class TasksController < ApplicationController
 
   def set_board
     @board = Board.find(params[:board_id])
+  end
+
+  def set_task
+    @task = @board.tasks.find(params[:id])
   end
 
   private
