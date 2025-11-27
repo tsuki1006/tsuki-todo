@@ -14,6 +14,8 @@ ja:
         title: 'タイトル'
         content: '内容'
         deadline: '期限'
+      comment:
+        content: 'コメント'
   date:
     abbr_day_names:
     - 日

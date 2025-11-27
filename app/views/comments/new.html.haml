@@ -2,8 +2,8 @@
   %h2 New Comment
 
   %ul.error_messages
-  - @comment.errors.full_messages.each do |message|
-    %li.error_message= message
+    - @comment.errors.full_messages.each do |message|
+      %li.error_message= message
 
   = form_with(model: [ @board, @task, @comment ], local: true) do |f|
     %div
