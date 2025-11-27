@@ -1,29 +1,39 @@
+// cardの基本型
 @mixin card($background-color) {
   min-height: 160px;
   border-radius: 10px;
   background-color: $background-color;
 }
 
-.card {
-  @include card(#F4F4F4);
-  padding: 30px 20px 20px;
+li.card {
+  margin-bottom: 26px;
+  position: relative;
+}
 
-  &_new {
+.card {
+
+  &_link {
+    @include card(#f4f4f4);
+    display: block;
+    padding: 30px 20px 20px;
+  }
+
+  &_link_new {
     @include card(unset);
-    border: 1px dashed #00000033;
     display: flex;
+    border: 1px dashed #00000033;
     justify-content: center;
     align-items: center;
   }
 
-  &_content {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &_detail {
+    width: calc(100% - 40px);
+
     &_title {
       font-size: 18px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     &_content {
       font-size: 14px;
@@ -34,20 +44,63 @@
 
   &_icon {
     margin-top: 30px;
+    height: 30px;
       img {
-          width: 30px;
-          height: 30px;
+        width: 30px;
+        height: 30px;
       }
   }
 
   &_edit {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+
     img {
-        width: 24px;
-        height: 100%;
+      width: 24px;
+      height: 100%;
     }
   }
-}
 
-li + li {
-    margin-top: 26px;
+// only task
+  &_img {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    height: 170px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: inherit;
+      object-fit:cover;
+    }
+  }
+
+  &_item {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .card_icon {
+      margin-top: 0;
+    }
+
+  }
+
+  &_message {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    span{
+      opacity: 0.2;
+      font-size: 14px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
 }

@@ -5,6 +5,7 @@
 @use "button";
 @use "form";
 @use "card";
+@use "task";
 
 
 html {
@@ -40,6 +41,15 @@ body {
   width: 100%;
 }
 
+h2 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.3em;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -52,8 +62,12 @@ ul {
 }
 
 section {
-  &.boards {
+  &.boards, &.tasks {
     margin: 35px 0;
+  }
+
+  &.task {
+    margin-top: 30px;
   }
 }
 

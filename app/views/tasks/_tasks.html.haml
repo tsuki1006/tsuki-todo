@@ -1,0 +1,18 @@
+%li.card
+  = link_to board_task_path(board_id: task.board_id, id: task), class: "card_link" do
+    - if task.image.attached?
+      .card_img
+        = image_tag task.image
+    .card_content
+      .card_detail
+        %p.card_detail_title
+          = task.title
+        %p.card_detail_content
+          = task.content
+      .card_item
+        .card_icon
+          = image_tag 'icon1'
+        .card_message
+          %span 23
+          = image_tag 'message'
+

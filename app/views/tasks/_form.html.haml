@@ -1,0 +1,22 @@
+%ul.error_messages
+  - task.errors.full_messages.each do |message|
+    %li.error_message= message
+= form_with(model: [board, task], local: true) do |f|
+  %div
+    = f.label :title, 'Name'
+  %div
+    = f.text_field :title, class: "text"
+  %div.field_description
+    = f.label :content, 'Description'
+  %div
+    = f.text_area :content, class: "text"
+  %div
+    = f.label :deadline, 'Deadline'
+  %div
+    = f.date_field :deadline, class: "text"
+  %div.field_image
+    = f.label :image, 'Image *optional'
+  %div
+    = f.file_field :image, class: "image"
+  .actions.no_fixed
+    = f.submit "Submit", class: "btn-primary"

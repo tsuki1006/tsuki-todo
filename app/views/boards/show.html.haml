@@ -1,0 +1,9 @@
+.container
+  %h2= @board.title
+  %section.tasks
+    %ul.tasks_list
+      - @tasks.each do |task|
+        = render 'tasks/tasks', task: task
+
+      %li.card_new
+        = link_to '+ Add new card', new_board_task_path(@board), class: "card_link_new"
