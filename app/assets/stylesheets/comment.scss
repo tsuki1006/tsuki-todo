@@ -1,0 +1,11 @@
+.comments {
+  margin-top: 35px;
+
+  &_new {
+    margin-top: 32px;
+
+    .card_link_new {
+      min-height: 57px;
+    }
+  }
+}

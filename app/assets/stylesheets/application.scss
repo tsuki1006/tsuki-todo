@@ -6,6 +6,7 @@
 @use "form";
 @use "card";
 @use "task";
+@use "comment";
 
 
 html {
@@ -44,6 +45,11 @@ body {
 h2 {
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: normal;
 }
 
 p {
