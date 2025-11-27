@@ -15,3 +15,11 @@
         = image_tag @task.image
     .task_content
       %p= @task.content
+
+  %section.comments
+    %h3 Comment
+    %ul.comments_list
+      - @comments.each do |comment|
+        = render 'comment', comment: comment
+    .comments_new
+      = link_to '+ Add new comment', new_board_task_comment_path(board_id: @board, task_id: @task), class: "card_link_new"
