@@ -3,7 +3,7 @@
   %section.boards
     %ul.boards_list
       - @boards.each do |board|
-        = render 'board', board: board
+        = render 'card', board: board
 
       %li.card_new
         = link_to '+ Add new board', new_board_path, class: "card_link_new"
