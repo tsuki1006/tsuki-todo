@@ -35,4 +35,8 @@ class User < ApplicationRecord
   def has_written_task?(task)
     tasks.exists?(id: task.id)
   end
+
+  def prepare_profile
+    profile || build_profile
+  end
 end
