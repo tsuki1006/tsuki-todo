@@ -26,6 +26,8 @@ class User < ApplicationRecord
   has_many :tasks, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+  has_one :profile, dependent: :destroy
+
   def has_written_board?(board)
     boards.exists?(id: board.id)
   end
@@ -33,4 +35,17 @@ class User < ApplicationRecord
   def has_written_task?(task)
     tasks.exists?(id: task.id)
   end
+
+  def prepare_profile
+    profile || build_profile
+  end
+
+  def avatar_image
+    if profile&.image&.attached?
+      profile.image
+    else
+      'default-avatar'
+    end
+  end
+
 end

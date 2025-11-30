@@ -1,6 +1,6 @@
 %li
   .comments_list_content
     .comment_icon
-      = image_tag 'icon1'
+      = image_tag comment.user.avatar_image, class: "icon_large"
     .comment_content
       %p.card_detail_content= comment.content

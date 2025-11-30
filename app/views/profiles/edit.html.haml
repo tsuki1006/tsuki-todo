@@ -1,0 +1,20 @@
+.container
+  %h2 Edit profile
+
+  %ul.error_messages
+    - @profile.errors.full_messages.each do |message|
+      %li.error_message= message
+
+  = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+    %div
+      = f.label :name, 'Name'
+    %div
+      = f.text_field :name, class: "text"
+
+    %div.field_image
+      = f.label :image, 'Icon image'
+    %div
+      = f.file_field :image, class: "image"
+
+    .actions
+      = f.submit "Submit", class: "btn-primary"

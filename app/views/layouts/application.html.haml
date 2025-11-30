@@ -20,8 +20,9 @@
         = link_to 'Boards', root_path
       - if user_signed_in?
         .dropdown
-          = image_tag 'icon1'
+          = image_tag current_user.avatar_image, class: "icon_large"
           .dropdown-content
+            = link_to 'プロフィールを変更', edit_profile_path
             = link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete }
       - else
         = link_to 'ログイン', new_user_session_path

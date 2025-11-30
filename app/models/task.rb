@@ -28,4 +28,7 @@ class Task < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+  def comments_from_other_users
+    comments.select { |comment| comment.user_id != self.user.id }
+  end
 end

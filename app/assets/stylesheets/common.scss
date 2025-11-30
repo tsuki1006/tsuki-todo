@@ -2,14 +2,11 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  height: 40px;
 
-  img {
-    width: 40px;
-    height: 100%;
-
-    &.edit {
-      width: 25px;
-    }
+  img.edit {
+    width: 25px;
+    height: 6px;
   }
 }
 
@@ -20,7 +17,7 @@
   background-color: #ffffff;
   border: 1px solid #f4f4f4;
   border-radius: 10px;
-  width: 100px;
+  width: 140px;
   padding: 10px;
   text-align: center;
 }
@@ -37,7 +34,7 @@
   font-size: 12px;
 }
 
-.mini a:last-child {
+.dropdown-content a:last-child {
   margin-top: 13px;
 }
 
@@ -58,4 +55,29 @@
 .error_message {
   opacity: 0.4;
   margin: 0;
+}
+
+
+// icon
+.icon_large {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.icon_small {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.icon_small + .icon_small {
+  margin-right: -13px;
+}
+
+.group {
+  display: flex;
+  flex-direction: row-reverse;
 }
