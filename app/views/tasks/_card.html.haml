@@ -15,6 +15,6 @@
           - task.comments_from_other_users.each do |comment|
             = image_tag comment.user.avatar_image, class: "icon_small"
         .card_message
-          %span 23
+          %span= task.comments.count
           = image_tag 'message'
 
