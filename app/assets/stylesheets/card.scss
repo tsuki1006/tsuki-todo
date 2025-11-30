@@ -68,6 +68,13 @@ li.card {
     }
   }
 
+  &_detail_deadline {
+    font-size: 14px;
+    opacity: 0.4;
+    margin-top: 15px;
+    text-align: right;
+  }
+
   &_item {
     margin-top: 30px;
     display: flex;
