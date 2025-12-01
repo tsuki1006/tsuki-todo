@@ -4,33 +4,33 @@
   &_list {
     margin-top: 25px;
 
-    li + li {
-      margin-top: 32px;
-    }
-
     &_content {
       min-height: 40px;
       display: flex;
       justify-content: left;
       align-items: center;
       gap: 16px;
+    }
 
-      &_icon {
-        width: 40px;
-        height: 40px;
-      }
-
-      p {
-        margin: 0;
-      }
+    li + li {
+      margin-top: 32px;
     }
   }
+}
 
-  &_new {
-    margin-top: 32px;
+.comment_icon {
+  width: 40px;
+  height: 40px;
+}
 
-    .card_link_new {
-      min-height: 57px;
-    }
-  }
+.comment_content p {
+  margin: 0;
+}
+
+.comments_new {
+  margin-top: 32px;
+}
+
+.card_link_new {
+  min-height: 57px;
 }

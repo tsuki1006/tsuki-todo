@@ -12,16 +12,7 @@
 
   &_edit {
     font-weight: normal;
-    word-wrap: none;
     overflow-wrap: normal;
-
-    .dropdown {
-      display: flex;
-      align-items: center;
-    }
-    .dropdown-content {
-      top: 20px;
-    }
   }
 }
 
