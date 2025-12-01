@@ -1,8 +1,6 @@
 // dropdown
 .dropdown {
   position: relative;
-  display: inline-block;
-  height: 40px;
 
   img.edit {
     width: 25px;
@@ -27,6 +25,20 @@
   height: 66px;
   text-align-last: left;
   padding: 12px 15px;
+}
+
+.header .dropdown {
+  height: 40px;
+}
+
+.task_top_edit {
+  .dropdown {
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-content {
+    top: 8px;
+  }
 }
 
 .dropdown-content a {

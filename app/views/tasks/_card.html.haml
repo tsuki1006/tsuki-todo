@@ -9,6 +9,8 @@
           = task.title
         %p.card_detail_content
           = task.content
+        %p.card_detail_deadline
+          = "D/L: #{task.deadline}"
       .card_item
         .card_icon.group
           = image_tag task.user.avatar_image, class: "icon_small"

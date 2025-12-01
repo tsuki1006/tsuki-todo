@@ -6,14 +6,14 @@
       = f.label :email
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", class: "text"
-    .field.password
+    .field.form_mt_large
       = f.label :password
       -# - if @minimum_password_length
       -#   %em
       -#     (#{@minimum_password_length} characters minimum)
       %br/
       = f.password_field :password, autocomplete: "new-password", class: "text"
-    .field
+    .field.form_mt_normal
       = f.label :password_confirmation
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password", class: "text"

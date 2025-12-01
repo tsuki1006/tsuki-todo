@@ -1,8 +1,18 @@
 .task_top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
+
+  &_back {
+    width: 30px;
+    height: 30px;
+    opacity: 0.4;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
 
   &_title {
     overflow: hidden;
@@ -12,16 +22,8 @@
 
   &_edit {
     font-weight: normal;
-    word-wrap: none;
     overflow-wrap: normal;
-
-    .dropdown {
-      display: flex;
-      align-items: center;
-    }
-    .dropdown-content {
-      top: 20px;
-    }
+    margin-left: auto;
   }
 }
 
@@ -42,4 +44,11 @@
   border-radius: 10px;
   background-color: #F4F4F4;
   padding: 20px 15px;
+}
+
+.task_deadline {
+  margin-top: 20px;
+  margin-right: 6px;
+  text-align: right;
+  opacity: 0.7;
 }

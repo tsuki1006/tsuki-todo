@@ -6,17 +6,18 @@
     = f.label :title, 'Name'
   %div
     = f.text_field :title, class: "text"
-  %div.field_description
+  %div.form_mt_large
     = f.label :content, 'Description'
   %div
     = f.text_area :content, class: "text"
-  %div
+  %div.form_mt_normal
     = f.label :deadline, 'Deadline'
   %div
     = f.date_field :deadline, class: "text"
-  %div.field_image
-    = f.label :image, 'Image *optional'
+  %div.form_mt_middle
+    = f.label :image, 'Image'
+    %span.optional *optional
   %div
     = f.file_field :image, class: "image"
-  .actions.no_fixed
+  .actions
     = f.submit "Submit", class: "btn-primary"

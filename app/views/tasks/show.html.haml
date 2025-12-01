@@ -1,6 +1,8 @@
 .container
-  %h2.task_top
-    .task_top_title= @task.title
+  .task_top
+    = link_to :back, class: "task_top_back" do
+      = image_tag 'back.svg'
+    %h2.task_top_title= @task.title
     - if user_signed_in? && current_user.has_written_task?(@task)
       .task_top_edit
         .dropdown
@@ -15,11 +17,13 @@
         = image_tag @task.image
     .task_content
       %p= @task.content
+    .task_deadline
+      %p= "D/L: #{@task.deadline}"
 
   %section.comments
     %h3 Comment
     %ul.comments_list
       - @comments.each do |comment|
-        = render 'comment', comment: comment
+        = render 'comments/comment', comment: comment
     .comments_new
       = link_to '+ Add new comment', new_board_task_comment_path(board_id: @board, task_id: @task), class: "card_link_new"

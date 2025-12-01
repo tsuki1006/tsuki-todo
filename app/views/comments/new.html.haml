@@ -7,6 +7,6 @@
 
   = form_with(model: [ @board, @task, @comment ], local: true) do |f|
     %div
-      = f.text_area :content, class: "text"
+      = f.text_area :content, class: "no_margin"
     .actions
       = f.submit "Submit", class: "btn-primary"
