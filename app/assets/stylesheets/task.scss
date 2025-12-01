@@ -1,8 +1,18 @@
 .task_top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
+
+  &_back {
+    width: 30px;
+    height: 30px;
+    opacity: 0.4;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
 
   &_title {
     overflow: hidden;
@@ -13,6 +23,7 @@
   &_edit {
     font-weight: normal;
     overflow-wrap: normal;
+    margin-left: auto;
   }
 }
 
