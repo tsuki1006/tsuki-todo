@@ -45,6 +45,8 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   # gem "rubocop-rails-omakase", require: false
   gem 'rubocop-rails', require: false
+
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -69,3 +71,5 @@ gem 'devise'
 gem 'dartsass-rails', '~> 0.5.1'
 
 gem 'importmap-rails', '~> 2.2'
+
+gem 'aws-sdk-s3', require: false
