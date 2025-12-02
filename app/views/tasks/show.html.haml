@@ -6,7 +6,7 @@
     - if user_signed_in? && current_user.has_written_task?(@task)
       .task_top_edit
         .dropdown
-          = image_tag 'combined_shape', class: 'edit'
+          = image_tag 'combined_shape.png', class: 'edit'
           .dropdown-content.mini
             = link_to 'Edit', edit_board_task_path(board_id: @board, id: @task)
             = link_to 'Delete', board_task_path(board_id: @board, id: @task), data: { turbo_method: :delete, turbo_confirm: '本当に削除してもよろしいですか？' }
